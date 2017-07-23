@@ -1,0 +1,5 @@
+[
+	{ "keys": ["f12"], "command": "open_in_browser" },
+	{ "keys": ["alt+shift+f"], "command": "reindent" },
+	{ "keys": ["ctrl+\\"], "command": "toggle_side_bar" },
+]
