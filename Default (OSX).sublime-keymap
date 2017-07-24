@@ -2,4 +2,14 @@
 	{ "keys": ["f12"], "command": "open_in_browser" },
 	{ "keys": ["alt+shift+f"], "command": "reindent" },
 	{ "keys": ["ctrl+\\"], "command": "toggle_side_bar" },
+
+	{ "keys": ["tab"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
+    [
+        { "key": "preceding_text", "operator": "regex_contains", "operand": "[^ \t]+", "match_all": true },
+        { "key": "following_text", "operator": "regex_contains", "operand": "^[)'\"\\]]", "match_all": true },
+        { "key": "auto_complete_visible", "operator": "equal", "operand": false },
+        // prevent tab escape when cycling through snippet fields
+        { "key": "has_next_field", "operator": "equal", "operand": false }
+    ]   
+}
 ]
